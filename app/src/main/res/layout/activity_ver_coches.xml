@@ -9,7 +9,7 @@
 
 
     <ImageView
-        android:id="@+id/imageView5"
+        android:id="@+id/fondo_coche"
         android:layout_width="409dp"
         android:layout_height="287dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -23,7 +23,7 @@
         android:id="@+id/car1"
         android:layout_width="142dp"
         android:layout_height="125dp"
-        android:src="@drawable/car1"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintLeft_toLeftOf="parent"
