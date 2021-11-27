@@ -43,7 +43,7 @@
         app:layout_constraintHorizontal_bias="0.947"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.168"
+        app:layout_constraintVertical_bias="0.156"
         app:srcCompat="@drawable/logo_app" />
 
     <ImageView
@@ -55,18 +55,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/vintage_car_on_sky_background_in_cartoon_style_vector" />
-
-    <Button
-        android:id="@+id/return1"
-        android:layout_width="72dp"
-        android:layout_height="67dp"
-        android:background="@drawable/flecha_volver"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.047"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:contentDescription="volver"
-        app:layout_constraintVertical_bias="0.18" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
