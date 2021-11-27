@@ -43,7 +43,7 @@
         app:layout_constraintHorizontal_bias="0.947"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.156"
+        app:layout_constraintVertical_bias="0.141"
         app:srcCompat="@drawable/logo_app" />
 
     <ImageView
@@ -54,6 +54,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/vintage_car_on_sky_background_in_cartoon_style_vector" />
+        app:srcCompat="@drawable/vintage_car" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
