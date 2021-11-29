@@ -2,16 +2,15 @@ package com.example.inicio
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.ArrayAdapter
-import android.widget.ImageView
-import android.widget.ProgressBar
-import android.widget.TextView
+import android.widget.*
 import pl.droidsonroids.gif.GifImageView
 
 class ver_coches : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_ver_coches)
+
+
         val ArrayCoches= mutableListOf<Cars>();
         var fondo_coche=findViewById<ImageView>(R.id.fondo_coches)
         var gifcoche=findViewById<GifImageView>(R.id.coches)
@@ -24,9 +23,26 @@ class ver_coches : AppCompatActivity() {
         var sw_vmax=findViewById<TextView>(R.id.Valor_vel)
         var sw_desc=findViewById<TextView>(R.id.valor_desc)
         var sw_gas=findViewById<TextView>(R.id.valor_gas)
+        var next_car=findViewById<ImageButton>(R.id.Next_Car)
+        var previous_car=findViewById<ImageButton>(R.id.Previous_Car)
+        fun mostrarcoche(coche:Cars){
+            fondo_coche.setImageResource(coche.fondo)
+            sw_name.setText(coche.nombre)
+            sw_acc.setText(coche.aceleracion.toString())
+            sw_desc.setText(coche.desaceleracion.toString())
+            sw_gas.setText(coche.gasolina.toString())
+            sw_vmax.setText(coche.velocidadMaxima.toString())
+            gifcoche.setImageResource(coche.design)
+            velocidadMaxima.setProgress(coche.velocidadMaxima)
+            aceleracion.setProgress(coche.aceleracion)
+            desaceleracion.setProgress(coche.desaceleracion)
+            gasolina.setProgress(coche.gasolina)
+        }
+
+        var posicion :Int=0
         val coche1=Cars("octane",70,6,3,90,R.drawable.car1,R.drawable.fondo_coche1)
         val coche2=Cars("octane V2",80,5,6,75,R.drawable.car2,R.drawable.fondo_coche1)
-        val coche3=Cars("lorean",100,8,6,60,R.drawable.car2,R.drawable.fondo_coche3)
+        val coche3=Cars("lorean",100,8,6,60,R.drawable.car3,R.drawable.fondo_coche3)
         val coche4=Cars("bearch",85,10,5,75,R.drawable.car4,R.drawable.fondo_car4)
         val coche5=Cars("Rayo Mcqueen",95,12,8,50,R.drawable.car5,R.drawable.fondo_coche1)
         ArrayCoches.add(coche1)
@@ -34,23 +50,34 @@ class ver_coches : AppCompatActivity() {
         ArrayCoches.add(coche3)
         ArrayCoches.add(coche4)
         ArrayCoches.add(coche5)
+
+
         aceleracion.max=30
         velocidadMaxima.max=100
         desaceleracion.max=30
         gasolina.max=100
-        fondo_coche.setImageResource(ArrayCoches[0].fondo)
-        sw_name.setText(ArrayCoches[0].nombre)
-        sw_acc.setText(ArrayCoches[0].aceleracion.toString())
-        sw_desc.setText(ArrayCoches[0].desaceleracion.toString())
-        sw_gas.setText(ArrayCoches[0].gasolina.toString())
-        sw_vmax.setText(ArrayCoches[0].velocidadMaxima.toString())
-        gifcoche.setImageResource(ArrayCoches[0].design)
-        velocidadMaxima.setProgress(ArrayCoches[0].velocidadMaxima)
-        aceleracion.setProgress(ArrayCoches[0].aceleracion)
-        desaceleracion.setProgress(ArrayCoches[0].desaceleracion)
-        gasolina.setProgress(ArrayCoches[0].gasolina)
+    mostrarcoche(ArrayCoches[posicion])
 
 
+
+    next_car.setOnClickListener {
+        posicion++;
+        if (posicion<ArrayCoches.size){
+            mostrarcoche(ArrayCoches[posicion])
+        }else{
+            posicion=0;
+            mostrarcoche(ArrayCoches[posicion])
+        }
+    }
+        previous_car.setOnClickListener {
+            posicion--;
+        if(posicion<0){
+            posicion=ArrayCoches.size-1
+            mostrarcoche(ArrayCoches[posicion])
+        }else{
+            mostrarcoche(ArrayCoches[posicion])
+        }
+        }
     }
 }
 
