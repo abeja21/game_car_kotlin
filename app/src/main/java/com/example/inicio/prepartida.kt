@@ -5,13 +5,12 @@ import android.os.Bundle
 import android.widget.*
 import pl.droidsonroids.gif.GifImageView
 
-class ver_coches : AppCompatActivity() {
+class prepartida : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_ver_coches)
-
-
+        setContentView(R.layout.activity_prepartida)
         val ArrayCoches= mutableListOf<Cars>();
+        var comenzar=findViewById<Button>(R.id.comenzar1)
         var fondo_coche=findViewById<ImageView>(R.id.fondo_coches_1)
         var gifcoche=findViewById<GifImageView>(R.id.coches1)
         var aceleracion=findViewById<ProgressBar>(R.id.acelerar)
@@ -56,31 +55,28 @@ class ver_coches : AppCompatActivity() {
         velocidadMaxima.max=100
         desaceleracion.max=30
         gasolina.max=100
-    mostrarcoche(ArrayCoches[posicion])
+        mostrarcoche(ArrayCoches[posicion])
 
 
 
-    next_car.setOnClickListener {
-        posicion++;
-        if (posicion<ArrayCoches.size){
-            mostrarcoche(ArrayCoches[posicion])
-        }else{
-            posicion=0;
-            mostrarcoche(ArrayCoches[posicion])
+        next_car.setOnClickListener {
+            posicion++;
+            if (posicion<ArrayCoches.size){
+                mostrarcoche(ArrayCoches[posicion])
+            }else{
+                posicion=0;
+                mostrarcoche(ArrayCoches[posicion])
+            }
         }
-    }
         previous_car.setOnClickListener {
             posicion--;
-        if(posicion<0){
-            posicion=ArrayCoches.size-1
-            mostrarcoche(ArrayCoches[posicion])
-        }else{
-            mostrarcoche(ArrayCoches[posicion])
+            if(posicion<0){
+                posicion=ArrayCoches.size-1
+                mostrarcoche(ArrayCoches[posicion])
+            }else{
+                mostrarcoche(ArrayCoches[posicion])
+            }
         }
-        }
+
     }
 }
-
-
-
-
