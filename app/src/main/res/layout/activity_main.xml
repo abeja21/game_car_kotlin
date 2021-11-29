@@ -36,7 +36,7 @@
         app:layout_constraintVertical_bias="0.815" />
 
     <pl.droidsonroids.gif.GifImageView
-        android:id="@+id/car1"
+        android:id="@+id/coches"
         android:layout_width="146dp"
         android:layout_height="165dp"
         android:src="@drawable/car1"
