@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Inicio">
         <activity
+            android:name=".usuario"
+            android:exported="false" />
+        <activity
             android:name=".prepartida"
             android:exported="false" />
         <activity

@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Rocket League Race</string>
+    <string name="selecciona_tu_personaje">Selecciona tu personaje</string>
+    <string name="el_nombre_de_tu_piloto_es">El nombre de tu piloto es:</string>
 </resources>

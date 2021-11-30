@@ -5,13 +5,9 @@
       <map>
         <entry key="..\:/Users/angel/AndroidStudioProjects/inicio/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/angel/AndroidStudioProjects/inicio/app/src/main/res/layout/activity_menu.xml" value="0.264" />
-        <entry key="..\:/Users/angel/AndroidStudioProjects/inicio/app/src/main/res/layout/activity_ver_coches.xml" value="0.536" />
-        <entry key="..\:/Users/morok/AndroidStudioProjects/game_car_kotlin/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.22314814814814815" />
-        <entry key="..\:/Users/morok/AndroidStudioProjects/game_car_kotlin/app/src/main/res/drawable/ic_launcher_background.xml" value="0.3828125" />
-        <entry key="..\:/Users/morok/AndroidStudioProjects/game_car_kotlin/app/src/main/res/layout/activity_menu.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/morok/AndroidStudioProjects/game_car_kotlin/app/src/main/res/layout/activity_prepartida.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/morok/AndroidStudioProjects/game_car_kotlin/app/src/main/res/layout/activity_ver_coches.xml" value="0.33" />
-        <entry key="..\:/Users/morok/AndroidStudioProjects/game_car_kotlin/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.22314814814814815" />
+        <entry key="..\:/Users/angel/AndroidStudioProjects/inicio/app/src/main/res/layout/activity_prepartida.xml" value="0.20697463768115942" />
+        <entry key="..\:/Users/angel/AndroidStudioProjects/inicio/app/src/main/res/layout/activity_usuario.xml" value="0.20697463768115942" />
+        <entry key="..\:/Users/angel/AndroidStudioProjects/inicio/app/src/main/res/layout/activity_ver_coches.xml" value="0.264" />
       </map>
     </option>
   </component>

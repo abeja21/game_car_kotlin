@@ -40,16 +40,12 @@ class ver_coches : AppCompatActivity() {
         }
 
         var posicion :Int=0
-        val coche1=Cars("octane",70,6,3,90,R.drawable.car1,R.drawable.fondo_coche1)
-        val coche2=Cars("octane V2",80,5,6,75,R.drawable.car2,R.drawable.fondo_coche1)
-        val coche3=Cars("lorean",100,8,6,60,R.drawable.car3,R.drawable.fondo_coche3)
-        val coche4=Cars("bearch",85,10,5,75,R.drawable.car4,R.drawable.fondo_car4)
-        val coche5=Cars("Rayo Mcqueen",95,12,8,50,R.drawable.car5,R.drawable.fondo_coche5)
-        ArrayCoches.add(coche1)
-        ArrayCoches.add(coche2)
-        ArrayCoches.add(coche3)
-        ArrayCoches.add(coche4)
-        ArrayCoches.add(coche5)
+
+        ArrayCoches.add(Cars("octane",70,6,3,90,R.drawable.car1,R.drawable.fondo_coche1))
+        ArrayCoches.add(Cars("octane V2",80,5,6,75,R.drawable.car2,R.drawable.fondo_coche1))
+        ArrayCoches.add(Cars("lorean",100,8,6,60,R.drawable.car3,R.drawable.fondo_coche3))
+        ArrayCoches.add(Cars("bearch",85,10,5,75,R.drawable.car4,R.drawable.fondo_car4))
+        ArrayCoches.add(Cars("Rayo Mcqueen",95,12,8,50,R.drawable.car5,R.drawable.fondo_coche5))
 
 
         aceleracion.max=30
