@@ -1,11 +1,14 @@
 package com.example.inicio
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.*
 import pl.droidsonroids.gif.GifImageView
 
 class ver_coches : AppCompatActivity() {
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_ver_coches)
@@ -25,7 +28,8 @@ class ver_coches : AppCompatActivity() {
         var sw_gas=findViewById<TextView>(R.id.valor_gas)
         var next_car=findViewById<ImageButton>(R.id.Next_Car)
         var previous_car=findViewById<ImageButton>(R.id.Previous_Car)
-        fun mostrarcoche(coche:Cars){
+
+       fun mostrarcoche(coche:Cars){
             fondo_coche.setImageResource(coche.fondo)
             sw_name.setText(coche.nombre)
             sw_acc.setText(coche.aceleracion.toString())
@@ -74,6 +78,8 @@ class ver_coches : AppCompatActivity() {
             mostrarcoche(ArrayCoches[posicion])
         }
         }
+
+
     }
 }
 

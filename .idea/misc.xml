@@ -3,10 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/angel/AndroidStudioProjects/inicio/app/src/main/res/layout/activity_juego.xml" value="0.24010416666666667" />
         <entry key="..\:/Users/angel/AndroidStudioProjects/inicio/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/angel/AndroidStudioProjects/inicio/app/src/main/res/layout/activity_menu.xml" value="0.264" />
         <entry key="..\:/Users/angel/AndroidStudioProjects/inicio/app/src/main/res/layout/activity_prepartida.xml" value="0.20697463768115942" />
-        <entry key="..\:/Users/angel/AndroidStudioProjects/inicio/app/src/main/res/layout/activity_usuario.xml" value="0.20697463768115942" />
+        <entry key="..\:/Users/angel/AndroidStudioProjects/inicio/app/src/main/res/layout/activity_select_circuitos.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/angel/AndroidStudioProjects/inicio/app/src/main/res/layout/activity_usuario.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/angel/AndroidStudioProjects/inicio/app/src/main/res/layout/activity_ver_coches.xml" value="0.264" />
       </map>
     </option>

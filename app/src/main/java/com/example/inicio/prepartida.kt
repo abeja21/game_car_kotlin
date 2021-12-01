@@ -1,5 +1,6 @@
 package com.example.inicio
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.*
@@ -10,7 +11,7 @@ class prepartida : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_prepartida)
         val ArrayCoches= mutableListOf<Cars>();
-        var comenzar=findViewById<Button>(R.id.comenzar1)
+        var continuar=findViewById<Button>(R.id.comenzar1)
         var fondo_coche=findViewById<ImageView>(R.id.fondo_coches_1)
         var gifcoche=findViewById<GifImageView>(R.id.coches1)
         var aceleracion=findViewById<ProgressBar>(R.id.acelerar)
@@ -77,6 +78,10 @@ class prepartida : AppCompatActivity() {
                 mostrarcoche(ArrayCoches[posicion])
             }
         }
+        continuar.setOnClickListener {
+            val cambiando= Intent(this,Select_Circuitos::class.java)
+            startActivity(cambiando)
 
+        }
     }
 }

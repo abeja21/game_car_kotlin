@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Inicio">
         <activity
+            android:name=".juego"
+            android:exported="false" />
+        <activity
+            android:name=".Select_Circuitos"
+            android:exported="false" />
+        <activity
             android:name=".usuario"
             android:exported="false" />
         <activity
