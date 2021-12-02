@@ -20,7 +20,7 @@ class menu : AppCompatActivity() {
             startActivity(cambiando)
         }
     jugar.setOnClickListener {
-        val cambiando=Intent(this,usuario::class.java)
+        val cambiando=Intent(this,seleccionar_personaje::class.java)
         startActivity(cambiando)
     }
     }

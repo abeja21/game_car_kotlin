@@ -16,10 +16,10 @@
             android:name=".Select_Circuitos"
             android:exported="false" />
         <activity
-            android:name=".usuario"
+            android:name=".seleccionar_personaje"
             android:exported="false" />
         <activity
-            android:name=".prepartida"
+            android:name=".seleccionar_coche"
             android:exported="false" />
         <activity
             android:name=".ver_coches"
@@ -28,7 +28,7 @@
             android:name=".menu"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".inicio"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -6,11 +6,19 @@ import android.os.Bundle
 import android.widget.*
 import pl.droidsonroids.gif.GifImageView
 
-class prepartida : AppCompatActivity() {
+import kotlin.random.Random
+
+var posicion_coches :Int=0
+val ArrayCoches= mutableListOf<Cars>();
+var Jugadores_coches= mutableMapOf<player,Cars>()
+
+class seleccionar_coche : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_prepartida)
-        val ArrayCoches= mutableListOf<Cars>();
+
         var continuar=findViewById<Button>(R.id.comenzar1)
         var fondo_coche=findViewById<ImageView>(R.id.fondo_coches_1)
         var gifcoche=findViewById<GifImageView>(R.id.coches1)
@@ -39,46 +47,50 @@ class prepartida : AppCompatActivity() {
             gasolina.setProgress(coche.gasolina)
         }
 
-        var posicion :Int=0
-        val coche1=Cars("octane",70,6,3,90,R.drawable.car1,R.drawable.fondo_coche1)
-        val coche2=Cars("octane V2",80,5,6,75,R.drawable.car2,R.drawable.fondo_coche1)
-        val coche3=Cars("lorean",100,8,6,60,R.drawable.car3,R.drawable.fondo_coche3)
-        val coche4=Cars("bearch",85,10,5,75,R.drawable.car4,R.drawable.fondo_car4)
-        val coche5=Cars("Rayo Mcqueen",95,12,8,50,R.drawable.car5,R.drawable.fondo_coche5)
-        ArrayCoches.add(coche1)
-        ArrayCoches.add(coche2)
-        ArrayCoches.add(coche3)
-        ArrayCoches.add(coche4)
-        ArrayCoches.add(coche5)
+
+
+        ArrayCoches.add(Cars("octane",70,6,3,90,R.drawable.car1,R.drawable.fondo_coche1))
+        ArrayCoches.add(Cars("octane V2",80,5,6,75,R.drawable.car2,R.drawable.fondo_coche1))
+        ArrayCoches.add(Cars("lorean",100,8,6,60,R.drawable.car3,R.drawable.fondo_coche3))
+        ArrayCoches.add(Cars("bearch",85,10,5,75,R.drawable.car4,R.drawable.fondo_car4))
+        ArrayCoches.add(Cars("Rayo Mcqueen",95,12,8,50,R.drawable.car5,R.drawable.fondo_coche5))
 
 
         aceleracion.max=30
         velocidadMaxima.max=100
         desaceleracion.max=30
         gasolina.max=100
-        mostrarcoche(ArrayCoches[posicion])
+        mostrarcoche(ArrayCoches[posicion_coches])
 
 
 
         next_car.setOnClickListener {
-            posicion++;
-            if (posicion<ArrayCoches.size){
-                mostrarcoche(ArrayCoches[posicion])
+            posicion_coches++;
+            if (posicion_coches<ArrayCoches.size){
+                mostrarcoche(ArrayCoches[posicion_coches])
             }else{
-                posicion=0;
-                mostrarcoche(ArrayCoches[posicion])
+                posicion_coches=0;
+                mostrarcoche(ArrayCoches[posicion_coches])
             }
         }
         previous_car.setOnClickListener {
-            posicion--;
-            if(posicion<0){
-                posicion=ArrayCoches.size-1
-                mostrarcoche(ArrayCoches[posicion])
+            posicion_coches--;
+            if(posicion_coches<0){
+                posicion_coches=ArrayCoches.size-1
+                mostrarcoche(ArrayCoches[posicion_coches])
             }else{
-                mostrarcoche(ArrayCoches[posicion])
+                mostrarcoche(ArrayCoches[posicion_coches])
             }
         }
         continuar.setOnClickListener {
+            for (i in 0..ArrayPersonaje.size){
+                if (ArrayPersonaje[i].bot==false){
+                    Jugadores_coches.put(ArrayPersonaje[i], ArrayCoches[posicion_coches])
+                }else{
+                    Jugadores_coches.put(ArrayPersonaje[i], ArrayCoches[Random.nextInt(0,
+                        ArrayCoches.size-1)])
+                }
+            }
             val cambiando= Intent(this,Select_Circuitos::class.java)
             startActivity(cambiando)
 

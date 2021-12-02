@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/fondo_app"
-    tools:context=".usuario">
+    tools:context=".seleccionar_personaje">
 
     <ImageButton
         android:id="@+id/prev_per"
