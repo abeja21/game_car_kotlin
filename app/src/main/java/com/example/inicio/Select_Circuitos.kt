@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.widget.*
 import org.w3c.dom.Text
 val ArrayCircuito= mutableListOf<circuit>()
-var circuito_seleccionado:circuit = TODO()
+lateinit var circuito_seleccionado:circuit
 
 
 class Select_Circuitos : AppCompatActivity() {

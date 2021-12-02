@@ -83,7 +83,7 @@ class seleccionar_coche : AppCompatActivity() {
             }
         }
         continuar.setOnClickListener {
-            for (i in 0..ArrayPersonaje.size){
+            for (i in 0..ArrayPersonaje.size-1){
                 if (ArrayPersonaje[i].bot==false){
                     Jugadores_coches.put(ArrayPersonaje[i], ArrayCoches[posicion_coches])
                 }else{
