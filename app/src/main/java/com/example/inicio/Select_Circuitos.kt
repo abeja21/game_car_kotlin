@@ -29,9 +29,9 @@ class Select_Circuitos : AppCompatActivity() {
 
         }
 
-        ArrayCircuito.add(circuit("circuito champiñon",R.drawable.circuito1,1,10,5))
-        ArrayCircuito.add(circuit("circuito platano",R.drawable.circuito2,3,15,7))
-        ArrayCircuito.add(circuit("circuito rayo",R.drawable.circuito3,5,20,13))
+        ArrayCircuito.add(circuit("circuito champiñon",R.drawable.circuito1,1,arrayOf('r','r','c','r','c','r','r','r','c','c','r')))
+        ArrayCircuito.add(circuit("circuito platano",R.drawable.circuito2,3,arrayOf('r','r','r','r','c','c','r','c','c','r','c','r','r','c','c','r','r','r')))
+        ArrayCircuito.add(circuit("circuito rayo",R.drawable.circuito3,5,arrayOf('r','c','c','c','r','r','c','c','c','c','r','r','r','r','r','c','c','c','c','c','c','r','r')))
         mostarCircuito(ArrayCircuito[posicion])
 
         siguiente_circuito.setOnClickListener {

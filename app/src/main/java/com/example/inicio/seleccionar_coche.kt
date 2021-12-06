@@ -5,13 +5,13 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.*
 import pl.droidsonroids.gif.GifImageView
+import java.util.*
 
 import kotlin.random.Random
 
 var posicion_coches :Int=0
 val ArrayCoches= mutableListOf<Cars>();
-var Jugadores_coches= mutableMapOf<player,Cars>()
-
+var Jugadores_coches= mutableMapOf<Int,Int>()
 class seleccionar_coche : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -85,15 +85,18 @@ class seleccionar_coche : AppCompatActivity() {
         continuar.setOnClickListener {
             for (i in 0..ArrayPersonaje.size-1){
                 if (ArrayPersonaje[i].bot==false){
-                    Jugadores_coches.put(ArrayPersonaje[i], ArrayCoches[posicion_coches])
+
+                    Jugadores_coches.put(i, posicion_coches)
                 }else{
-                    Jugadores_coches.put(ArrayPersonaje[i], ArrayCoches[Random.nextInt(0,
-                        ArrayCoches.size-1)])
+                    Jugadores_coches.put(i,Random.nextInt(0, ArrayCoches.size-1))//ARREGLAR POFAVOR NO PUEDEN TENER 2 PERSONAS EL MISMO COCHE :c ANGEL DEL FUTURO SUERTE <3
                 }
             }
+        println(Jugadores_coches)
             val cambiando= Intent(this,Select_Circuitos::class.java)
             startActivity(cambiando)
 
         }
     }
 }
+
+
