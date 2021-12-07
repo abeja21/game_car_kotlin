@@ -64,28 +64,36 @@ class juego : AppCompatActivity() {
 
         }
         fun play(){
-             while (partida.playing){
-                 println(campeones)
+            Thread(Runnable {
+                while (partida.playing){
 
-                 if (indicador< ArrayPersonaje.size-1){
-                     if(ArrayCoches[partida.jugadores[indicador]!!].ingame){
-                    if (ArrayCoches[partida.jugadores[indicador]!!].dr< partida.circuito.distance ){
-                        moverse(ArrayCoches[partida.jugadores[indicador]!!], partida.circuito.track[ArrayCoches[partida.jugadores[indicador]!!].dr/100])
-                        update(indicador, ArrayCoches[partida.jugadores[indicador]!!].dr)
-                    }else{
-                        ArrayCoches[partida.jugadores[indicador]!!].ingame=false
-                        campeones.add(ArrayPersonaje[indicador].Nombre)
-                        if (campeones.size!= ArrayPersonaje.size){
-                            partida.playing=false
+                    if (indicador< ArrayPersonaje.size){
+                        if(ArrayCoches[partida.jugadores[indicador]!!].ingame){
+                            if (ArrayCoches[partida.jugadores[indicador]!!].dr< partida.circuito.distance ){
+                                println("${ArrayPersonaje[indicador].Nombre}= dr->${ArrayCoches[partida.jugadores[indicador]!!].dr} vl->${ArrayCoches[partida.jugadores[indicador]!!].velin}")
+                                moverse(ArrayCoches[partida.jugadores[indicador]!!], partida.circuito.track[ArrayCoches[partida.jugadores[indicador]!!].dr/100])
+                                update(indicador, ArrayCoches[partida.jugadores[indicador]!!].dr)
+                                Thread.sleep(100)
+                            }else{
+                                ArrayCoches[partida.jugadores[indicador]!!].ingame=false
+                                campeones.add(ArrayPersonaje[indicador].Nombre)
+
+                                if (campeones.size== ArrayPersonaje.size){
+
+                                    partida.playing=false
+                                }
+                            }
                         }
+                        indicador++
+                    }else{
+                        indicador=0
                     }
-                     }
-                 }else{
-                     indicador=0
-                 }
-                 indicador++
-               Thread.sleep(1000)
-             }
+
+
+                }
+            }).start()
+
+            println(campeones.toString())
              }
         play()
     }

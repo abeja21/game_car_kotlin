@@ -83,13 +83,20 @@ class seleccionar_coche : AppCompatActivity() {
             }
         }
         continuar.setOnClickListener {
+            var auxiliar:Int=0
+            Jugadores_coches.put(posicion_per, posicion_coches)
             for (i in 0..ArrayPersonaje.size-1){
-                if (ArrayPersonaje[i].bot==false){
+               if(ArrayPersonaje[i].bot){
+                   if (auxiliar!= posicion_coches){
+                       Jugadores_coches.put(i,auxiliar)
+                       auxiliar++
+                   }else{
+                       auxiliar++
+                       Jugadores_coches.put(i,auxiliar)
+                       auxiliar++
+                   }
 
-                    Jugadores_coches.put(i, posicion_coches)
-                }else{
-                    Jugadores_coches.put(i,Random.nextInt(0, ArrayCoches.size-1))//ARREGLAR POFAVOR NO PUEDEN TENER 2 PERSONAS EL MISMO COCHE :c ANGEL DEL FUTURO SUERTE <3
-                }
+               }
             }
         println(Jugadores_coches)
             val cambiando= Intent(this,Select_Circuitos::class.java)
