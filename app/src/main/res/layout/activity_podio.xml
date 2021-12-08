@@ -5,234 +5,218 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/fondo_app"
-    tools:context=".juego">
-
-    <TextView
-        android:id="@+id/Titulo_Juego"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="CARRERA"
-        android:textColor="#FDFDFD"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.143" />
+    tools:context=".podio">
 
     <pl.droidsonroids.gif.GifImageView
-        android:id="@+id/gif_pers1"
+        android:id="@+id/primer_puesto"
         android:layout_width="74dp"
         android:layout_height="71dp"
 
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.02"
+        app:layout_constraintHorizontal_bias="0.406"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.219" />
+        app:layout_constraintVertical_bias="0.251" />
 
     <pl.droidsonroids.gif.GifImageView
-        android:id="@+id/gif_pers2"
+        android:id="@+id/segundo_puesto"
         android:layout_width="74dp"
         android:layout_height="71dp"
 
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.02"
+        app:layout_constraintHorizontal_bias="0.406"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.369" />
+        app:layout_constraintVertical_bias="0.389" />
 
     <pl.droidsonroids.gif.GifImageView
-        android:id="@+id/gif_pers3"
+        android:id="@+id/quinto_puesto"
         android:layout_width="74dp"
         android:layout_height="71dp"
 
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.02"
+        app:layout_constraintHorizontal_bias="0.406"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.521" />
+        app:layout_constraintVertical_bias="0.819" />
 
     <pl.droidsonroids.gif.GifImageView
-        android:id="@+id/gif_pers4"
+        android:id="@+id/cuarto_puesto"
         android:layout_width="74dp"
         android:layout_height="71dp"
 
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.02"
+        app:layout_constraintHorizontal_bias="0.406"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.677" />
+        app:layout_constraintVertical_bias="0.681" />
 
     <pl.droidsonroids.gif.GifImageView
-        android:id="@+id/gif_pers5"
+        android:id="@+id/tercer_puesto"
         android:layout_width="74dp"
         android:layout_height="71dp"
 
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.02"
+        app:layout_constraintHorizontal_bias="0.406"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.834" />
-
-    <SeekBar
-        android:id="@+id/carrera1"
-        style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="292dp"
-        android:layout_height="32dp"
-        android:background="@drawable/carretera"
-        android:progressTint="#0A9FEF"
-        android:scrollbarAlwaysDrawHorizontalTrack="false"
-        android:thumb="@drawable/seekbar_rooklee"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.865"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.23" />
-
-    <SeekBar
-        android:id="@+id/carrera2"
-        style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="292dp"
-        android:layout_height="32dp"
-        android:background="@drawable/carretera"
-        android:indeterminateDrawable="@drawable/progress_naruto"
-        android:progressTint="#0A9FEF"
-        android:thumb="@drawable/progress_naruto"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.865"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.374" />
-
-    <SeekBar
-        android:id="@+id/carrera3"
-        style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="292dp"
-        android:layout_height="32dp"
-        android:background="@drawable/carretera"
-        android:progressTint="#0A9FEF"
-        android:thumb="@drawable/seekbar_shikamaru"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.865"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.522" />
-
-    <SeekBar
-        android:id="@+id/carrera4"
-        style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="292dp"
-        android:layout_height="32dp"
-        android:background="@drawable/carretera"
-        android:progressTint="#0A9FEF"
-        android:thumb="@drawable/seekbar_gotenks"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.865"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.668" />
-
-    <SeekBar
-        android:id="@+id/carrera5"
-        style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="292dp"
-        android:layout_height="32dp"
-        android:background="@drawable/carretera"
-        android:progressTint="#0A9FEF"
-        android:thumb="@drawable/seekbar_doraemon"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.865"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.821" />
+        app:layout_constraintVertical_bias="0.537" />
 
     <TextView
-        android:id="@+id/jugador1"
+        android:id="@+id/Titulo1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="#FF0000"
+        android:text="PODIO"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.145" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="72dp"
+        android:layout_height="68dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.085"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.25"
+        app:srcCompat="@drawable/medalla_1" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="72dp"
+        android:layout_height="68dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.079"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.678"
+        app:srcCompat="@drawable/medalla_4" />
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="72dp"
+        android:layout_height="68dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.085"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.82"
+        app:srcCompat="@drawable/medalla_5" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="72dp"
+        android:layout_height="68dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.085"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.535"
+        app:srcCompat="@drawable/medalla_3" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="72dp"
+        android:layout_height="68dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.079"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.387"
+        app:srcCompat="@drawable/medalla_2" />
+
+    <TextView
+        android:id="@+id/primer_jugador"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#FFFFFF"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.304"
+        app:layout_constraintHorizontal_bias="0.747"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.19" />
+        app:layout_constraintVertical_bias="0.266" />
 
     <TextView
-        android:id="@+id/jugador2"
+        android:id="@+id/tercer_jugador"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="#FF0000"
+        android:textColor="#FFFFFF"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.304"
+        app:layout_constraintHorizontal_bias="0.747"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.333" />
+        app:layout_constraintVertical_bias="0.537" />
 
     <TextView
-        android:id="@+id/jugador3"
+        android:id="@+id/cuarto_jugador"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="#FF0000"
+        android:textColor="#FFFFFF"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.304"
+        app:layout_constraintHorizontal_bias="0.747"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.47" />
+        app:layout_constraintVertical_bias="0.664" />
 
     <TextView
-        android:id="@+id/jugador5"
+        android:id="@+id/quinto_jugador"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="#FF0000"
+        android:textColor="#FFFFFF"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.304"
+        app:layout_constraintHorizontal_bias="0.747"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.761" />
+        app:layout_constraintVertical_bias="0.811" />
 
     <TextView
-        android:id="@+id/jugador4"
+        android:id="@+id/segundo_jugador"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="#FF0000"
+        android:textColor="#FFFFFF"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.304"
+        app:layout_constraintHorizontal_bias="0.747"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.612" />
+        app:layout_constraintVertical_bias="0.393" />
 
     <Button
-        android:id="@+id/podio"
+        android:id="@+id/reiniciar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="#1475B5"
-        android:text="podio"
+        android:text="Iniico"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.953" />
+        app:layout_constraintVertical_bias="0.956" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

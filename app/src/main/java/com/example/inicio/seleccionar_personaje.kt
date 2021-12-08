@@ -15,7 +15,7 @@ class seleccionar_personaje : AppCompatActivity() {
 
         val previous_per=findViewById<ImageButton>(R.id.prev_per)
         val next_per=findViewById<ImageButton>(R.id.next_per)
-        val gif_per=findViewById<GifImageView>(R.id.gif_pers1)
+        val gif_per=findViewById<GifImageView>(R.id.primer_puesto)
         val name_per=findViewById<TextView>(R.id.nombre_personaje)
         val cont=findViewById<Button>(R.id.continuar)
 
